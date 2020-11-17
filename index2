@@ -1,6 +1,5 @@
 $params = $_SERVER;
 $params[\Magento\Store\Model\StoreManager::PARAM_RUN_CODE] = $mageRunCode;
-
 $params[\Magento\Store\Model\StoreManager::PARAM_RUN_TYPE] = $mageRunType;
 $params[Bootstrap::INIT_PARAM_FILESYSTEM_DIR_PATHS] = [
             DirectoryList::PUB => [DirectoryList::URL_PATH => ''],
