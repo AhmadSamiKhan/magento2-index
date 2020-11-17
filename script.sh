@@ -62,12 +62,13 @@ do
                 \$mageRunCode = '$SITE_CODE';
                 \$mageRunType = 'website';
                 break;
-            }
+            
 	    
 	    default:
                 $mageRunCode = 'base';
                 $mageRunType = 'website';
                 break;
+	}
 EOT
 				 
 				
