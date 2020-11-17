@@ -103,16 +103,19 @@ echo -e "$E\n"
 echo -e $'\e[1;32mHere are the configuration steps. Please follow as guided.\e[0m'
 
 echo -e $'\e[1;32m1- Change the webroot to pub from application settings.\e[0m'
-echo -e $'\e[1;32m2- Update the pub/index.php as:\e[0m'
+echo -e $'\e[1;32m2- Updated the pub/index.php as:\e[0m'
 
-echo -e "$D\n"
-cat index1
-cat block
-cat index2
-echo -e "$D\n"
+
+
+cp $HOME/$DB_NAME/public_html/pub/index.php $HOME/$DB_NAME/public_html/pub/index.php-backup-script
+echo > $HOME/$DB_NAME/public_html/pub/index.php
+cat index1 >> $HOME/$DB_NAME/public_html/pub/index.php
+cat block >> $HOME/$DB_NAME/public_html/pub/index.php
+cat index2 >> $HOME/$DB_NAME/public_html/pub/index.php
+
 
 echo -e $'\e[1;32m3- Flushing the cache of application\e[0m'
-php $HOME/public_html/bin/magento c:f  > /tmp/test
-echo -e $'\e[1;32m4- If all above steps have been completed. Kindly check the stores now.\e[0m'
+php $HOME/$DB_NAME/public_html/bin/magento c:f  > /tmp/test
+echo -e $'\e[1;32m4- Verify if all above steps have been completed. Kindly check the stores now.\e[0m'
 
 rm block index1 index2
