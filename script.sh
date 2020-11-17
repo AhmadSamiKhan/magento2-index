@@ -52,11 +52,12 @@ do
         php $HOME/$DB_NAME/public_html/bin/magento store:website:list
                 while [ $x -le $NO_OF_STORES ] || [[ $SITE_DOMAIN == '' ]]; do
 
-                                
+                                echo -e "\n"
                                 echo -e "$Yel Gathering SITE-$x Details $EndCOLOR"
                                 echo -e "$F\n"
 
                                 read -r -p $'\e[0;32m a- Enter the DOMAIN of the site \e[0m: '  SITE_DOMAIN
+                                SITE_DOMAIN=$(echo "$SITE_DOMAIN" | sed -e 's|^[^/]*//||' -e 's|/.*$||')
                                 read -r -p $'\e[0;32m b- Enter the CODE of the site from the above list\e[0m: '  SITE_CODE
 
 
