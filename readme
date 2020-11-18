@@ -1,0 +1,39 @@
+ STEP BY STEP GUIDE to RUN THE SCRIPT
+ ====================================
+ ************************************
+
+
+
+ Gathering Initial Details
+...................................................................
+
+1- Enter the Database name:    [DB name of the application]
+2- Enter the number of websites to configure: [Enter the number of domains you want to configure. Count with and www seperate. For e.g if I have domain xyz.com, so I will count it as 2]
+
+3- +----+------------------+---------------+---------------+------------+------------+
+	| ID | Default Group Id | Name          | Code          | Sort Order | Is Default |
+	+----+------------------+---------------+---------------+------------+------------+
+	| 0  | 0                | Admin         | admin         | 0          | 0          |
+	| 1  | 1                | xysssssssss   | xyzzzzzzzz    | 0          | 1          |
+	| 2  | 2                | vvvvvvvvvvvvv | vvvvvvvvvvvvv | 2          | 0          |
+	+----+------------------+---------------+---------------+------------+------------+
+
+This is the output of Store list fetched via magento2 Cli. You need to focus on the column "CODE" which are basically containing the Mage run codes.
+
+1-  Gathering SITE-1 Details
+...................................................................
+
+ a- Enter the DOMAIN of the site : [Enter the domain 1] 
+ b- Enter the CODE of the site from the above list: [check step 3 and match which code is matching with your website, if customer has not given]
+
+
+===================================================================
+ CHECKS TO CONFIGURE THE MAGENTO MULTISITE 2
+===================================================================
+
+
+1- {this tells us if the webroot is correct or not}
+2- {this tells us that it has renamed the original index.php file and have replaced it with the newer one}
+3- {On this step, we flushes the magento2 cache}
+4- {This steps tells us to check settings from backend just to reverify}
+5- {this steps tells us to check all of the stores}
