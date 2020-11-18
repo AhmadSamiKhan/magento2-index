@@ -13,6 +13,7 @@ HOME="/home/master/applications/"
 IRed='\e[0;91m';
 Yel='\e[0;33m';
 EndCOLOR="\e[0m"
+BRed='\e[1;31m';
 
 x=1
 y=1
@@ -143,7 +144,7 @@ echo -e $'\e[1;32mHere are the configuration steps. Please follow as guided.\e[0
 if [[ $CONTENT == "Running from pub" ]]; then
   									echo -e $'\e[1;32m1- The webroot is fine. It is set to /pub which is correct.\e[0m ----- DONE' 
 								else 
-									echo -e $'\e[1;32m1- The webroot is not correct. Please change it to /pub from app settings\e[0m ----- DONE'
+									echo -e $'\e[1;31m1- The webroot is not correct. Please change it to /pub from app settings\e[0m ----- DONE'
 								fi
 echo -e $'\e[1;32m2- Renamed the original index.php as "index.php-backup-script" and Updated the pub/index.php.\e[0m ----- DONE' 
 
